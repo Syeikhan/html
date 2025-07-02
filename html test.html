@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noone - Portfolio</title>
+    <script>
+    // Fungsi sendQuestion dan script terkait dapat dihapus jika tidak digunakan lagi
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap');
+        body {
+            font-family: 'JetBrains Mono', 'Segoe UI', Arial, sans-serif;
+            background: #0f2027;
+            background: linear-gradient(135deg, #0f2027 0%, #2c5364 100%);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        nav {
+            background: #101c12;
+            border-bottom: 2px solid #00ff41;
+            padding: 12px 0;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        nav a {
+            color: #00ff41;
+            text-decoration: none;
+            margin: 0 18px;
+            font-size: 1.1rem;
+            font-family: 'JetBrains Mono', monospace;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: #1de9b6;
+        }
+        .container {
+            max-width: 750px;
+            margin: 48px auto;
+            background: rgba(10,18,10,0.98);
+            border-radius: 16px;
+            box-shadow: 0 6px 32px rgba(0,255,70,0.12);
+            padding: 40px 36px 36px 36px;
+            border: 1.5px solid #00ff41;
+        }
+        h1 {
+            color: #00ff41;
+            margin-bottom: 10px;
+            font-family: 'JetBrains Mono', 'Consolas', monospace;
+            font-size: 2.7rem;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 16px #00ff4166, 0 0 8px #00ff41;
+        }
+        .programmer-theme {
+            margin-bottom: 28px;
+            background: linear-gradient(90deg, #0f2027 60%, #00ff41 100%);
+            color: #00ff41;
+            padding: 14px 22px;
+            border-radius: 10px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 18px;
+            box-shadow: 0 2px 8px #00ff4133;
+            border-left: 5px solid #00ff41;
+            text-shadow: 0 0 6px #00ff41;
+        }
+        .info {
+            margin-bottom: 24px;
+            color: #baffc9;
+            font-size: 1.08rem;
+        }
+        .skills {
+            margin-bottom: 28px;
+        }
+        .skills span {
+            display: inline-block;
+            background: #101c12;
+            color: #00ff41;
+            padding: 7px 16px;
+            border-radius: 22px;
+            margin: 5px 8px 5px 0;
+            font-size: 15px;
+            font-family: 'JetBrains Mono', monospace;
+            box-shadow: 0 1px 4px #00ff411a;
+            border: 1px solid #00ff41;
+            text-shadow: 0 0 4px #00ff41;
+        }
+        .about {
+            color: #baffc9;
+            margin-bottom: 32px;
+            font-size: 1.08rem;
+        }
+        .projects {
+            margin-bottom: 32px;
+        }
+        .projects-title {
+            color: #00ff41;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            font-family: 'JetBrains Mono', monospace;
+            letter-spacing: 1px;
+            text-shadow: 0 0 6px #00ff41;
+        }
+        .project-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .project-list li {
+            background: #101c12;
+            margin-bottom: 10px;
+            padding: 13px 18px;
+            border-radius: 8px;
+            color: #baffc9;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.05rem;
+            box-shadow: 0 1px 6px #00ff411a;
+            border-left: 4px solid #00ff41;
+            transition: background 0.2s;
+            text-shadow: 0 0 4px #00ff41;
+        }
+        .project-list li:hover {
+            background: #1a2e1a;
+        }
+        .contact-btn {
+            display: inline-block;
+            background: linear-gradient(90deg, #00ff41 0%, #1de9b6 100%);
+            color: #0f2027;
+            padding: 13px 34px;
+            border: none;
+            border-radius: 28px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s;
+            margin-top: 18px;
+            box-shadow: 0 2px 12px #00ff4133;
+            font-family: 'JetBrains Mono', monospace;
+            letter-spacing: 1px;
+            text-shadow: 0 0 4px #00ff41;
+        }
+        .contact-btn:hover {
+            background: linear-gradient(90deg, #1de9b6 0%, #00ff41 100%);
+            color: #fff;
+        }
+        /* .contact-form dan style terkait bisa dihapus jika tidak digunakan */
+        @media (max-width: 600px) {
+            .container {
+                padding: 18px 6vw;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#about">Tentang</a>
+        <a href="#skills">Keahlian</a>
+        <a href="#projects">Project</a>
+        <a href="#contact">Kontak</a>
+    </nav>
+    <div class="container">
+        <h1>Noone</h1>
+        <div class="programmer-theme">
+            <span>&#60;Hacker /&#62;</span> &mdash; Passion for code, coffee, and creativity!
+        </div>
+        <div class="info" id="about">
+            <strong>Umur:</strong> 17 tahun<br>
+            <strong>Profesi:</strong> Programmer
+        </div>
+        <div class="skills" id="skills">
+            <strong>Keahlian:</strong><br>
+            <span>Python</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>HTML</span>
+            <span>dan lain-lain</span>
+        </div>
+        <div class="about">
+            <p>
+                Halo! Saya Noone, seorang programmer berusia 17 tahun yang berpengalaman dalam pengembangan web dan aplikasi menggunakan Python, CSS, JavaScript, dan teknologi lainnya. Saya senang belajar hal baru dan mengerjakan berbagai proyek kreatif.
+            </p>
+        </div>
+        <div class="projects" id="projects">
+            <div class="projects-title">Daftar Project Script:</div>
+            <ul class="project-list">
+                <li>NooneXinxis</li>
+                <li>azkamacrash</li>
+                <li>NooneDeath</li>
+                <li>NooneVictims</li>
+                <li>dan lain-lain</li>
+            </ul>
+        </div>
+        <a class="contact-btn" href="https://wa.me/6288224048788" target="_blank">Contact Me</a>
+        <!-- Kolom kirim pertanyaan dihapus -->
+    </div>
+    <!-- Form Kirim Pertanyaan -->
+    <div class="container" style="margin-top: 24px;">
+        <form id="questionForm" style="margin-top: 12px;">
+            <label for="userEmail" style="color:#00ff41;font-family:'JetBrains Mono',monospace;">Email Anda (opsional):</label><br>
+            <input type="email" id="userEmail" name="userEmail" placeholder="Email Anda" style="width:100%;padding:8px;margin:8px 0 16px 0;border-radius:6px;border:1px solid #00ff41;background:#101c12;color:#baffc9;font-family:'JetBrains Mono',monospace;"><br>
+            <label for="question" style="color:#00ff41;font-family:'JetBrains Mono',monospace;">Pertanyaan Anda:</label><br>
+            <textarea id="question" name="question" required rows="4" placeholder="Tulis pertanyaan Anda..." style="width:100%;padding:8px;border-radius:6px;border:1px solid #00ff41;background:#101c12;color:#baffc9;font-family:'JetBrains Mono',monospace;"></textarea><br>
+            <button type="submit" class="contact-btn" style="margin-top:10px;">Kirim Pertanyaan</button>
+            <div id="formStatus" style="margin-top:10px;font-family:'JetBrains Mono',monospace;"></div>
+        </form>
+    </div>
+    <script>
+    // Kirim pertanyaan ke email menggunakan EmailJS (tanpa backend)
+    (function() {
+        // EmailJS CDN
+        var script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js';
+        script.onload = function() {
+            emailjs.init('o4wgjwf3U_ioTJ_Wy'); // Ganti dengan user ID EmailJS Anda
+        };
+        document.head.appendChild(script);
+    })();
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var form = document.getElementById('questionForm');
+        var status = document.getElementById('formStatus');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            status.textContent = 'Mengirim...';
+            // Ganti SERVICE_ID, TEMPLATE_ID, dan USER_ID sesuai EmailJS Anda
+            emailjs.send('service_mc8gmyr', 'template_p76cwwd', {
+                from_email: 'nokos7522@gmail.com',
+                to_email: 'xxmaners@gmail.com',
+                reply_to: form.userEmail.value || 'nokos7522@gmail.com',
+                message: form.question.value,
+                user_email: form.userEmail.value
+            }).then(function() {
+                status.style.color = '#00ff41';
+                status.textContent = 'Pertanyaan berhasil dikirim!';
+                form.reset();
+            }, function(error) {
+                status.style.color = '#ff4141';
+                status.textContent = 'Gagal mengirim pertanyaan. Coba lagi.';
+            });
+        });
+    });
+    </script>
+</body>
+</html>
