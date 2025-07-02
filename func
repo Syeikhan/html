@@ -1,0 +1,20 @@
+function sendQuestion(form, status) {
+    status.textContent = 'Mengirim...';
+    // Ganti SERVICE_ID, TEMPLATE_ID, dan USER_ID sesuai EmailJS Anda
+    emailjs.send('service_mc8gmyr', 'template_p76cwwd', {
+        from_email: 'nokos7522@gmail.com',
+        to_email: 'xxmaners@gmail.com',
+        reply_to: form.userEmail.value || 'nokos7522@gmail.com',
+        message: form.question.value,
+        user_email: form.userEmail.value
+    }).then(function() {
+        status.style.color = '#00ff41';
+        status.textContent = 'Pertanyaan berhasil dikirim!';
+        form.reset();
+    }, function(error) {
+        status.style.color = '#ff4141';
+        status.textContent = 'Gagal mengirim pertanyaan. Coba lagi.';
+    });
+}
+</script>
+</html>
